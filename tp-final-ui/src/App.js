@@ -1,18 +1,26 @@
 import React, {useState} from 'react';
 import Opcion from './Opcion.js';
+import './Estilos.css';
 import Resultado from './Resultado.js';
+import tijera from "./imagenes/tijera.png";
+import lagarto from "./imagenes/lagarto.png";
+import piedra from "./imagenes/piedra.png";
+import papel from "./imagenes/papel.png";
+import spock from "./imagenes/spock.png";
 
 
 
 const App = () => {
 
   const opciones = [
-    {eleccion: "Tijera", derrota: ["Papel", "Lagarto"]},
-    {eleccion: "Papel", derrota: ["Piedra", "Spock"]},
-    {eleccion: "Piedra", derrota: ["Lagarto", "Tijera"]},
-    {eleccion: "Lagarto", derrota: ["Spock", "Papel"]},
-    {eleccion: "Spock", derrota: ["Tijera","Piedra"]}
+    {eleccion: "Tijera", imagen: tijera, derrota: ["Papel", "Lagarto"]},
+    {eleccion: "Papel", imagen: papel, derrota: ["Piedra", "Spock"]},
+    {eleccion: "Piedra", imagen: piedra, derrota: ["Lagarto", "Tijera"]},
+    {eleccion: "Lagarto", imagen: lagarto, derrota: ["Spock", "Papel"]},
+    {eleccion: "Spock", imagen: spock, derrota: ["Tijera","Piedra"]}
   ]
+
+  const historialCOM = [];
 
   const [eleccionJugador, setEleccionJugador] = useState({});
   const [eleccionCOM, setEleccionCOM] = useState({});
@@ -30,30 +38,46 @@ const App = () => {
     setEleccionCOM(seleccion);
   }
 
-  const sinRepetidos = () =>{
-    return ["Piedra", "Papel", "Tijera", "Lagarto", "Spok"];
-  }
+  
   
   return (
     <>
-       <div>
-        COM:
-        <span>{eleccionCOM.eleccion}</span>
+    <div >
+       <div className= " computadora">
+        <strong>COM:  
+        <span> {eleccionCOM.eleccion}</span>
+        </strong>
+        <div >
+        <img
+                src={eleccionCOM.imagen}
+                class="imagen img-fluid"
+              />
+        </div>
       </div>
-      <div>
-        Jugador: 
-        <span>{eleccionJugador.eleccion}</span>
-      </div>
-      <div>
+      <div className= "resultado ">
           {eleccionJugador.eleccion && <Resultado jugador = {eleccionJugador} COM = {eleccionCOM}/>}  
         </div>
-      <div>
-        {
-          sinRepetidos().map((e, index) => <Opcion seleccion ={seleccionarJugada} value = {opciones[index]}/>)
-        }
-        </div>
-         
+        
+        
+        <div className= "jugador">
+          <div>
+          <img
+                src={eleccionJugador.imagen}
+                class="imagen  img-fluid"
+              />
+          </div>
+        
+        <strong>Jugador:  
+        <span> {eleccionJugador.eleccion}</span>
+        </strong>
+      </div>
+      <div className= "opciones">
+        {opciones.map((e, index) => 
+            <Opcion seleccion ={seleccionarJugada} value = {opciones[index]}/>)}
+      </div>
+    </div>     
     </>
+
   )
 
 }

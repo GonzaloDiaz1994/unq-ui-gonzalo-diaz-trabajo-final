@@ -3,9 +3,15 @@ import React from 'react';
 const Opcion = (props) => {
 
     return (
-        <div onClick = {props.seleccion}>
+        
+        
+            <button type="button" class="opcion btn btn-primary" onClick = {props.seleccion}>
             {props.value.eleccion}
-        </div>
+            </button>
+  
+            
+            
+       
     )
 }
 

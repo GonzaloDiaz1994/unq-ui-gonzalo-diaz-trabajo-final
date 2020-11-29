@@ -1,0 +1,40 @@
+.opciones{
+    
+    
+    text-align: center;
+    margin-top: 1%;
+}
+
+.opcion{
+    margin-right: 0.5%;
+}
+
+body{
+    background-color: #264f66;
+}
+
+.jugador{
+    text-align: center;
+    margin-top: 7%;
+    color: whitesmoke;
+}
+
+.resultado{
+    text-align: center;
+    color: whitesmoke;
+    margin-top: 6%;
+    
+}
+
+.computadora{
+    text-align: center;
+    color: whitesmoke;
+}
+
+.imagen{
+    width: 12%;
+}
+
+.container{
+    background-color: #81ecec;
+}
