@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Opcion from './Opcion.js';
-import Resultado from './Resultado';
+import Resultado from './Resultado.js';
+
 
 
 const App = () => {
@@ -17,7 +18,7 @@ const App = () => {
   const [eleccionCOM, setEleccionCOM] = useState({});
 
   const seleccionarJugada = (event) => {
-    const jugada = opciones.find(s => s.eleccion === event.target.textContent);
+    const jugada = opciones.find(e => e.eleccion === event.target.textContent);
     console.log(jugada)
     setEleccionJugador(jugada);
     seleccionCOM();
@@ -32,26 +33,26 @@ const App = () => {
   const sinRepetidos = () =>{
     return ["Piedra", "Papel", "Tijera", "Lagarto", "Spok"];
   }
-
   
   return (
     <>
-      <div>
-        Jugador: 
-        <span>{eleccionJugador.eleccion}</span>
-      </div>
        <div>
         COM:
         <span>{eleccionCOM.eleccion}</span>
       </div>
       <div>
+        Jugador: 
+        <span>{eleccionJugador.eleccion}</span>
+      </div>
+      <div>
+          {eleccionJugador.eleccion && <Resultado jugador = {eleccionJugador} COM = {eleccionCOM}/>}  
+        </div>
+      <div>
         {
-          sinRepetidos().map((s, index) => <Opcion seleccion ={seleccionarJugada} value = {opciones[index]}/>)
+          sinRepetidos().map((e, index) => <Opcion seleccion ={seleccionarJugada} value = {opciones[index]}/>)
         }
         </div>
-        <div>
-          <Resultado jugador = {eleccionJugador} COM = {eleccionCOM}/>
-        </div>
+         
     </>
   )
 
