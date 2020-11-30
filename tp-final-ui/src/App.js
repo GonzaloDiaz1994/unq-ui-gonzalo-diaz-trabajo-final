@@ -7,6 +7,7 @@ import lagarto from "./imagenes/lagarto.png";
 import piedra from "./imagenes/piedra.png";
 import papel from "./imagenes/papel.png";
 import spock from "./imagenes/spock.png";
+import Bienvenida from './Bienvenida.js';
 
 
 
@@ -39,11 +40,10 @@ const App = () => {
   }
 
   
-  
   return (
     <>
     <div >
-       <div className= " computadora">
+       {eleccionJugador.eleccion && <div className= " computadora">
         <strong>COM:  
         <span> {eleccionCOM.eleccion}</span>
         </strong>
@@ -53,13 +53,14 @@ const App = () => {
                 class="imagen img-fluid"
               />
         </div>
-      </div>
+      </div>}
       <div className= "resultado ">
+          {!eleccionJugador.eleccion && <Bienvenida/>}
           {eleccionJugador.eleccion && <Resultado jugador = {eleccionJugador} COM = {eleccionCOM}/>}  
         </div>
         
         
-        <div className= "jugador">
+        {eleccionJugador.eleccion && <div className= "jugador">
           <div>
           <img
                 src={eleccionJugador.imagen}
@@ -70,7 +71,7 @@ const App = () => {
         <strong>Jugador:  
         <span> {eleccionJugador.eleccion}</span>
         </strong>
-      </div>
+      </div>}
       <div className= "opciones">
         {opciones.map((e, index) => 
             <Opcion seleccion ={seleccionarJugada} value = {opciones[index]}/>)}

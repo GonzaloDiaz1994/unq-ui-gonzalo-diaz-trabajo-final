@@ -1,8 +1,5 @@
 import React from 'react';
 
-
-
-
 const Resultado = (props) => {
 
     const comprobar = (p, c) =>{
@@ -16,15 +13,12 @@ const Resultado = (props) => {
     }
 
     let result;
-    var puntajePersonal = 0;
-    var puntajeCOM = 0;
+    
 
     if(comprobar(props.jugador, props.COM) && props.jugador.eleccion){
-        result = "GANASTE"
-        puntajePersonal++
+        result = "¡GANASTE!"
     }else if(comprobar(props.COM, props.jugador) && props.jugador.eleccion){
         result = "PERDISTE"
-        puntajeCOM++
     }else if(props.COM.eleccion === props.jugador.eleccion && props.jugador.eleccion){
         result = "EMPATARON"
     }
@@ -32,8 +26,7 @@ const Resultado = (props) => {
     return(
         <>
     <h1>{result}</h1>
-    {/* <h1>Puntaje personal = {puntajePersonal}</h1>
-    <h1>Puntaje COM = {puntajeCOM}</h1> */}
+    Elija nuevamente
     </>
     )
 }
