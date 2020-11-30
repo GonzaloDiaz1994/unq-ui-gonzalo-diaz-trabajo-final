@@ -15,26 +15,31 @@ body{
 
 .jugador{
     text-align: center;
-    margin-top: 4%;
+    margin-top: 2%;
     color: whitesmoke;
 }
 
 .resultado{
     text-align: center;
     color: whitesmoke;
-    margin-top: 6%;
+    margin-top: 4%;
     
 }
 
 .computadora{
+    margin-top: 2%;
     text-align: center;
     color: whitesmoke;
 }
 
 .imagen{
+    margin-top: 0.5%;
     width: 12%;
+   
 }
 
-.container{
-    background-color: #81ecec;
+.bienvenida{
+    text-align: center;
+    color: whitesmoke;
+    margin-top: 17%;
 }

@@ -42,11 +42,13 @@ const App = () => {
   
   return (
     <>
+
     <div >
        {eleccionJugador.eleccion && <div className= " computadora">
-        <strong>COM:  
+        <strong>Computadora seleccionó:  
         <span> {eleccionCOM.eleccion}</span>
         </strong>
+        
         <div >
         <img
                 src={eleccionCOM.imagen}
@@ -72,14 +74,13 @@ const App = () => {
         <span> {eleccionJugador.eleccion}</span>
         </strong>
       </div>}
+      </div>
       <div className= "opciones">
         {opciones.map((e, index) => 
             <Opcion seleccion ={seleccionarJugada} value = {opciones[index]}/>)}
       </div>
-    </div>     
+         
     </>
-
   )
-
 }
 export default App;
