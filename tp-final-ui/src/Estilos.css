@@ -1,45 +1,42 @@
-.opciones{
-    
-    
-    text-align: center;
-    margin-top: 1%;
+.opciones {
+  text-align: center;
+  margin-top: 1%;
 }
 
-.opcion{
-    margin-right: 0.5%;
+.opcion {
+  margin-right: 0.5%;
 }
 
-body{
-    background-color: #0e6306;
+body {
+  background-color: #03506e;
 }
 
-.jugador{
-    text-align: center;
-    margin-top: 2%;
-    color: whitesmoke;
+.jugador {
+  text-align: center;
+  margin-top: 2%;
+  color: whitesmoke;
 }
 
-.resultado{
-    text-align: center;
-    color: whitesmoke;
-    margin-top: 4%;
-    
+.resultado {
+  text-align: center;
+  color: whitesmoke;
+  margin-top: 3.5%;
+  margin-bottom: 2.5%;
 }
 
-.computadora{
-    margin-top: 2%;
-    text-align: center;
-    color: whitesmoke;
+.computadora {
+  margin-top: 2%;
+  text-align: center;
+  color: whitesmoke;
 }
 
-.imagen{
-    margin-top: 0.5%;
-    width: 12%;
-   
+.imagen {
+  margin-top: 0.5%;
+  width: 12%;
 }
 
-.bienvenida{
-    text-align: center;
-    color: whitesmoke;
-    margin-top: 17%;
+.bienvenida {
+  text-align: center;
+  color: whitesmoke;
+  margin-top: 17%;
 }

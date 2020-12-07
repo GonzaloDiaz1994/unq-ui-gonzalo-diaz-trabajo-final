@@ -1,0 +1,21 @@
+.card{
+    align-items: center;
+    width: 18rem;
+    background-color:rgb(24, 122, 4);
+    text-align: left;
+    border-color: black;
+    border-radius: 5%;
+    border-style:solid;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+.container{
+    align-content: center;
+   
+}
+
+.titulo{
+    text-align: center;
+    margin-bottom: 1%;
+}
