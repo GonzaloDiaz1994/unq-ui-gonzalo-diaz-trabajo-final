@@ -14,9 +14,9 @@ import Bienvenida from './Bienvenida.js';
 const App = () => {
 
   const opciones = [
-    {eleccion: "Tijera", imagen: tijera, derrota: ["Papel", "Lagarto"]},
-    {eleccion: "Papel", imagen: papel, derrota: ["Piedra", "Spock"]},
     {eleccion: "Piedra", imagen: piedra, derrota: ["Lagarto", "Tijera"]},
+    {eleccion: "Papel", imagen: papel, derrota: ["Piedra", "Spock"]},
+    {eleccion: "Tijera", imagen: tijera, derrota: ["Papel", "Lagarto"]},
     {eleccion: "Lagarto", imagen: lagarto, derrota: ["Spock", "Papel"]},
     {eleccion: "Spock", imagen: spock, derrota: ["Tijera","Piedra"]}
   ]
